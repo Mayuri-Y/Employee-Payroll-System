@@ -1,0 +1,22 @@
+public class EmployeePayrollSystem {
+    public static void main(String[] args) {
+        PayrollSystem payrollSystem = new PayrollSystem();
+
+        Employee employee1 = new Employee("E001", "John Doe", 15.0);
+        Employee employee2 = new Employee("E002", "Jane Smith", 18.0);
+
+        payrollSystem.addEmployee(employee1);
+        payrollSystem.addEmployee(employee2);
+
+        // Record hours worked
+        employee1.recordHoursWorked(40);
+        employee2.recordHoursWorked(30);
+
+        // Display employee list
+        payrollSystem.displayEmployeeList();
+
+        // Generate payslips
+        payrollSystem.generatePayslip(employee1);
+        payrollSystem.generatePayslip(employee2);
+    }
+}
